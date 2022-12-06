@@ -6,7 +6,7 @@ L'ordine degli esercizi sarebbe il seguente:
 2. `ComplexAlgebra`
 3. `Calculus`
 4. `Arrays`
-5. `Iterators`
+5. `Iterators` 
 6. `Indexers`
 
 Svolgere gli esercizi in ordine diverso non è un problema, a patto che `Calculus` ed `Arrays` vengano entrambi svolti dopo `ComplexAlgebra`
@@ -85,3 +85,4 @@ Dato un oggetto `IMap<TKey1, TKey2, TValue> map` e due chiavi `k1` di tipo `TKey
 Scopo dell'esercizio è implementare la classe `Map2D<TKey1, TKey2, TValue>`.
 Il test contenuto nel progetto `2-IndexersTests` tenta di chiarire il comportamento atteso per una classe che implementi `IMap2D`.
 L'esercizio si può considerare concluso quando tutti i test terminano con successo.
+.
