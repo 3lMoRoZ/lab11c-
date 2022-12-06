@@ -33,32 +33,30 @@ namespace Properties
         }
 
         // TODO improve
-        public string GetSeed()
-        {
-            return this.seed;
-        }
+        public string Seed(){ get; }
 
         // TODO improve
-        public string GetName()
-        {
-            return this.name;
-        }
+        public string Name(){ get; }
 
         // TODO improve
-        public int GetOrdinal()
-        {
-            return this.ordinal;
-        }
+        public int Ordinal(){ get;}
 
         /// <inheritdoc cref="object.ToString"/>
-        public override string ToString()
-        {
-            // TODO understand string interpolation
-            return $"{this.GetType().Name}(Name={this.GetName()}, Seed={this.GetSeed()}, Ordinal={this.GetOrdinal()})";
-        }
+        public override string ToString() => 
+            $"{GetType().Name}(Name={Name}, Seed={Seed}, Ordinal={Ordinal})";
 
         // TODO generate Equals(object obj)
+        public bool Equals(Card other)
+        {
+            return string.Equals(Seed, other.Seed) && string.Equals(Name, other.Name) && Ordinal == other.Ordinal;
+        }
+
+        public override bool Equals(object obj) => obj is Card card && Equals(card);
 
         // TODO generate GetHashCode()
+        public override int GetHashCode()
+        {
+            return HasCode.Combine(Seed, Name, Ordinal);
+        }
     }
 }
